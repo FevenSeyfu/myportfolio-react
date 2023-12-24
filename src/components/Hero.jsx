@@ -1,8 +1,10 @@
 import React from 'react'
-// import {HiArrowNa}
+import { HiArrowNarrowDown } from 'react-icons/hi'
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div className='w-full h-screen bg-[#0a192f]'>
+        
+    </div>
   )
 }
 
