@@ -5,10 +5,10 @@ const Hero = () => {
     <div className="w-full h-screen bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-[#ccd6f6]">Hey There, I'm</p>
-        <h2 className="text-red-400 text-3xl sm:text-5xl font-bold">
+        <h2 className="text-red-400 text-4xl sm:text-7xl font-bold">
           Feven Seyfu
         </h2>
-        <h1 className="text-red-600 text-3xl sm:text-5xl font-bold">
+        <h1 className="text-red-600 text-4xl sm:text-7xl font-bold">
           I'm a Full Stack Developer.
         </h1>
         <p className=" text-[#8892b0] py-4 max-w-[700px]">
