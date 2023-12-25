@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import Logo from '../assets/logos/Logo.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ">
       {/* logo */}
       <div>
-        <h1 className="text-red-300 font-bold">FevenSeyfu</h1>
+        <img src={Logo} alt="site logo" style={{ width: '200px' }} />
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
@@ -102,7 +103,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-900 hover:rounded-2xl">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
-              href="fevensey@gmail.com"
+              href="mailto:fevensey@gmail.com"
             >
               E-mail <HiOutlineMail size={30} />
             </a>
@@ -110,7 +111,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] hover:rounded-2xl">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
-              href="/"
+              href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>

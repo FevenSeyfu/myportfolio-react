@@ -1,8 +1,9 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
 const Hero = () => {
   return (
-    <div name='' className="w-full h-screen bg-[#0a192f]">
+    <div name="" className="w-full h-screen bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-[#ccd6f6]">Hey There, I'm</p>
         <h2 className="text-red-400 text-4xl sm:text-7xl font-bold">
@@ -17,12 +18,14 @@ const Hero = () => {
           my work and experience, if you like what you see,don't hesitate to
           contact me.
           <div>
-            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600">
-              View Work
+            <Link to="work" smooth={true} duration={500}>
+              <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-red-600 hover:border-red-600">
+                View Work
                 <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight  className="ml-3"/>
-                </span> 
-            </button>
+                  <HiArrowNarrowRight className="ml-3" />
+                </span>
+              </button>
+            </Link>
           </div>
         </p>
       </div>
