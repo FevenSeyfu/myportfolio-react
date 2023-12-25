@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import Logo from '../assets/logos/Logo.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleclick = () => setNav(!nav);
+
+  const scrollTo = (section) => {
+    scroller.scrollTo(section, {
+      duration: 500,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -50, 
+    });
+    handleclick(); 
+  };
+  
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ">
       {/* logo */}
@@ -16,31 +27,19 @@ const Navbar = () => {
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
-        <li>
-          <Link to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="work" smooth={true} duration={500}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
+        {["home", "about", "work", "skills", "contact"].map((section) => (
+          <li key={section}>
+            <Link
+              activeClass="text-pink-600 text-lg"
+              to={section}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          </li>
+        ))}
       </ul>
       {/* Hamburger */}
       <div onClick={handleclick} className="md:hidden z-10">
@@ -54,33 +53,12 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl">
-          <Link to="home" smooth={true} duration={500} onClick={handleclick}>
-            Home
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="about" smooth={true} duration={500} onClick={handleclick}>
-            About
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="work" smooth={true} duration={500} onClick={handleclick}>
-            Projects
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="skills" smooth={true} duration={500} onClick={handleclick}>
-            Skills
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          <Link to="contact" smooth={true} duration={500} onClick={handleclick}>
-            Contact
-          </Link>
-        </li>
+        {["home", "about", "work", "skills", "contact"].map((section) => (
+          <li key={section} className="py-6 text-4xl">
+            <span onClick={() => scrollTo(section)}>{section}</span>
+          </li>
+        ))}
       </ul>
-
       {/* social icons */}
       <div className="hidden lg:flex flex-col fixed top-[35%] left-0">
         <ul>
