@@ -5,7 +5,12 @@ import './index.css'
 import ReactGA from "react-ga4";
 
 ReactGA.initialize('G-2V76M8J23J');
-ReactGA.pageview(window.location.pathname + window.location.search)
+
+ReactGA.send({ 
+  hitType: "pageview", 
+  page: window.location.pathname, 
+});
+
   
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
