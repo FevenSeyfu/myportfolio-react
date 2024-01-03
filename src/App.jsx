@@ -9,10 +9,9 @@ import ReactGA from 'react-ga';
 
 
 const App = () => {
-  useEffect(() => {
-    ReactGA.initialize('G-2V76M8J23J');
-    ReactGA.pageview(window.location.pathname + window.location.search)
-    },[]);
+  ReactGA.initialize('G-2V76M8J23J');
+  ReactGA.pageview(window.location.pathname + window.location.search)
+    
   return (
     <div>
       <Navbar />
