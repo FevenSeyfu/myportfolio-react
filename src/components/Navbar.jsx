@@ -4,6 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import Logo from '../assets/logos/Logo.png'
+import LogoMobile from '../assets/logos/Logo-mobile.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -23,7 +24,8 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ">
       {/* logo */}
       <div>
-        <img src={Logo} alt="site logo" style={{ width: '200px' }} />
+        <img src={Logo} alt="site logo" className="hidden md:flex w-[200px]"/>
+        <img src={LogoMobile} alt="site logo"  className="md:hidden w-[50px]" />
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
