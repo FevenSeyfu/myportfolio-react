@@ -12,22 +12,23 @@ const About = () => {
           </div>
           <div></div>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold">
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-4 px-8">
+          <div className="sm:text-right text-2xl md:text-4xl font-bold">
             <p>
-              Hi!I'm Feven, Nice to meet you.Please Take a look around.
+              Hi! <br />
+              I'm Feven, Nice to meet you.Please Take a look around.
             </p>
           </div>
           <div>
             <p>
-              I'm a passionate software developer who enjoys crafting visually
-              appealing web applications to enhance users' experiences. My
-              expertise lies in building full-stack apps, implementing exciting
-              features, and ensuring websites run seamlessly on any device. Take
-              a look at my portfolio to explore my work and the skills I bring
-              to the table. If you find something you like and have an exciting
-              project in mind, don't hesitate to get in touch! Together, we can
-              transform your ideas into fantastic software solutions!
+              I'm a Computer Engineering graduate with 2+ years in the tech
+              industry. Passionate about creating practical solutions and
+              enhancing user experiences, I specialize in building
+              pixel-perfect, accessible, and responsive full-stack applications.
+              Explore my previous works to see the skills I bring to the table.
+              If you have an exciting project in mind, don't hesitate to reach
+              out! Let's collaborate to transform your ideas into exceptional
+              software solutions.
             </p>
           </div>
         </div>
