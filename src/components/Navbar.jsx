@@ -21,7 +21,7 @@ const Navbar = () => {
   };
   
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ">
+    <div className="fixed w-full h-[50px] md:h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-700 ">
       {/* logo */}
       <div>
         <img src={Logo} alt="site logo" className="hidden md:flex w-[200px]"/>
@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
-        {["home", "about", "work", "skills", "contact"].map((section) => (
+        {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li key={section}>
             <Link
               activeClass="text-pink-600 text-lg"
@@ -55,7 +55,7 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        {["home", "about", "work", "skills", "contact"].map((section) => (
+        {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li key={section} className="py-6 text-4xl">
             <span onClick={() => scrollTo(section)}>{section}</span>
           </li>
