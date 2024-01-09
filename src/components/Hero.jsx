@@ -1,5 +1,7 @@
 import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Hero = () => {
   return (
@@ -17,18 +19,31 @@ const Hero = () => {
           building responsive Full-stack web applications. Look through some of
           my work and experience, if you like what you see,don't hesitate to
           contact me.
-          </p>
-          <div>
-            <Link to="work" smooth={true} duration={500}>
-              <button className="text-white group border-2 px-6 py-3 my-2 flex items-center rounded-md hover:bg-red-600 hover:border-red-600">
-                View Work
-                <span className="group-hover:rotate-90 duration-300">
-                  <HiArrowNarrowRight className="ml-3" />
-                </span>
-              </button>
-            </Link>
-          </div>
-       
+        </p>
+        <div className="flex gap-2 md:hidden">
+          <a href="https://www.linkedin.com/in/fevenseyfu/" className="bg-red-600 rounded-full p-2 hover:animate-bounce">
+            <FaLinkedinIn className="text-white" size={20} />
+          </a>
+          <a href="https://github.com/FevenSeyfu" className="bg-red-600 rounded-full p-2 hover:animate-bounce">
+            <FaGithub className="text-white" size={20} />
+          </a>
+          <a href="mailto:fevensey@gmail.com" className="bg-red-600 rounded-full p-2 hover:animate-bounce">
+            <HiOutlineMail className="text-white" size={20} />
+          </a>
+          <a href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing" className="bg-red-600 rounded-full p-2 hover:animate-bounce">
+            <BsFillPersonLinesFill className="text-white" size={20} />
+          </a>
+        </div>
+        <div>
+          <Link to="work" smooth={true} duration={500}>
+            <button className="text-white group border-2 px-3 md:px-6 py-1 md:py-3 my-2 flex items-center rounded-md hover:bg-red-600 hover:border-red-600">
+              View Work
+              <span className="group-hover:rotate-90 duration-300">
+                <HiArrowNarrowRight className="ml-3" />
+              </span>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
