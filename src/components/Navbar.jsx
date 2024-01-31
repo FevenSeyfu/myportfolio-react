@@ -3,8 +3,8 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
-import Logo from '../assets/logos/Logo.png'
-import LogoMobile from '../assets/logos/Logo-mobile.png'
+import Logo from "../assets/logos/logo.png";
+import LogoMobile from "../assets/logos/logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,28 +15,29 @@ const Navbar = () => {
       duration: 500,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -50, 
+      offset: -50,
     });
-    handleclick(); 
+    handleclick();
   };
-  
+
   return (
-    <div className="fixed w-full h-[50px] md:h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-700 ">
+    <div className="fixed w-full h-[80px]  flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-800 z-10">
       {/* logo */}
       <div>
-        <img src={Logo} alt="site logo" className="hidden md:flex w-[200px]"/>
-        <img src={LogoMobile} alt="site logo"  className="md:hidden w-[50px]" />
+        <img src={Logo} alt="site logo" className="hidden md:flex w-[80px]" />
+        <img src={LogoMobile} alt="site logo" className="md:hidden w-[50px]" />
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
         {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li key={section}>
             <Link
-              activeClass="text-pink-600 text-lg"
+              activeClass="text-red-600 text-xl"
               to={section}
               spy={true}
               smooth={true}
               duration={500}
+              className="text-xl font-bold hover:text-red-400 hover:border-b-2 border-red-600 pb-7"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
@@ -44,10 +45,13 @@ const Navbar = () => {
         ))}
       </ul>
       {/* Hamburger */}
-      <div onClick={handleclick} className="md:hidden z-10">
+      <div
+        onClick={handleclick}
+        className="md:hidden text-3xl z-10 hover:text-red-600"
+      >
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
-      {/* Mobile menue */}
+      {/* Mobile menu */}
       <ul
         className={
           !nav
@@ -56,44 +60,61 @@ const Navbar = () => {
         }
       >
         {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
-          <li key={section} className="py-6 text-4xl">
-            <span onClick={() => scrollTo(section)}>{section}</span>
+          <li
+            key={section}
+            className="py-6 text-4xl w-full text-center hover:bg-red-600 "
+          >
+            <span onClick={() => scrollTo(section)}>
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </span>
           </li>
         ))}
       </ul>
       {/* social icons */}
       <div className="hidden lg:flex flex-col fixed top-[35%] left-0">
         <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-900 hover:rounded-2xl">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 hover:rounded-2xl hover:bg-red-600">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://www.linkedin.com/in/fevenseyfu/"
             >
-              Linkedin <FaLinkedin size={30} />
+              Linkedin{" "}
+              <span className="bg-red-600 p-2  rounded-full hover:bg-none">
+                <FaLinkedin size={30} />
+              </span>
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] hover:rounded-2xl">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 hover:rounded-2xl hover:bg-red-600">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://github.com/FevenSeyfu"
             >
-              Github <FaGithub size={30} />
+              Github{" "}
+              <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
+                <FaGithub size={30} />
+              </span>
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-900 hover:rounded-2xl">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 hover:rounded-2xl hover:bg-red-600">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="mailto:fevensey@gmail.com"
             >
-              E-mail <HiOutlineMail size={30} />
+              E-mail{" "}
+              <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
+                <HiOutlineMail size={30} />
+              </span>
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] hover:rounded-2xl">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 hover:rounded-2xl hover:bg-red-600">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing"
             >
-              Resume <BsFillPersonLinesFill size={30} />
+              Resume {" "}
+              <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
+                <BsFillPersonLinesFill size={30} />
+              </span>
             </a>
           </li>
         </ul>
