@@ -21,10 +21,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-[80px] md:h-[100px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-800 ">
+    <div className="fixed w-full h-[80px]  flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-800 z-10">
       {/* logo */}
       <div>
-        <img src={Logo} alt="site logo" className="hidden md:flex w-[120px]" />
+        <img src={Logo} alt="site logo" className="hidden md:flex w-[80px]" />
         <img src={LogoMobile} alt="site logo" className="md:hidden w-[50px]" />
       </div>
       {/* menu */}
@@ -37,7 +37,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="text-xl font-bold hover:text-red-400 hover:border-b-2 border-red-600 pb-10"
+              className="text-xl font-bold hover:text-red-400 hover:border-b-2 border-red-600 pb-7"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>

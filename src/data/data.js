@@ -18,21 +18,21 @@ export const data=[
     },
     {
         id:2,
-        name:"Rest-Countries with theme switcher",
+        name:"Rest Countries",
         image:RestCountries,
         description:'Rest Countries is a Frontend project that fetches countries information from an api and displays with additional feature to filter countries by region, search by name and switch themes color between dark and light.',
         github:"https://github.com/FevenSeyfu/Countries-color-theme-switcher",
         live:"https://rest-countries-theme.netlify.app/",
         technologies: [
             'React',
-            'Context-API',
+            'Context',
             'Tailwind',
             'Vite'
         ]
     },
     {
         id:3,
-        name:"Scrum flow",
+        name:"Scrum Flow",
         image:ScrumFlow,
         description : "A Project Management tool that helps teams organize and manage their projects. It includes features like task creation, assignment, progress tracking with defined RBAC for Product managers,Scrum managers and dev Team",
         github:"https://github.com/FevenSeyfu/scrumflow",

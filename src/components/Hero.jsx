@@ -22,7 +22,7 @@ const Hero = () => {
         </p>
         <div className="flex gap-2 md:hidden">
           <a href="https://www.linkedin.com/in/fevenseyfu/" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
-            <FaLinkedinIn className="text-white" size={30} />
+            <FaLinkedinIn className="text-white" size={20} />
           </a>
           <a href="https://github.com/FevenSeyfu" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
             <FaGithub className="text-white" size={20} />
