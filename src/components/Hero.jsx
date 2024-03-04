@@ -6,10 +6,25 @@ import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Hero = () => {
   const handleMouseEnter = () => {
-    ReactGA.send({ hitType: 'event', eventCategory: 'Hero', eventAction: 'view' });
+    ReactGA.send({
+      hitType: "event",
+      eventCategory: "Hero",
+      eventAction: "view",
+    });
   };
+  const handleLinkClick = (platform) => {
+    ReactGA.event({
+      category: "Social Link",
+      action: `Clicked on ${platform}`,
+    });
+  };
+
   return (
-    <div name="home" className="w-full h-screen bg-[#0a192f]" onMouseEnter={handleMouseEnter}>
+    <div
+      name="home"
+      className="w-full h-screen bg-[#0a192f]"
+      onMouseEnter={handleMouseEnter}
+    >
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full gap-2 pt-4">
         <p className="text-[#ccd6f6]">Hey There, I'm</p>
         <h2 className="text-red-400 text-2xl sm:text-5xl font-bold">
@@ -25,16 +40,32 @@ const Hero = () => {
           contact me.
         </p>
         <div className="flex gap-2 md:hidden">
-          <a href="https://www.linkedin.com/in/fevenseyfu/" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
+          <a
+            href="https://www.linkedin.com/in/fevenseyfu/"
+            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
+            onClick={() => handleLinkClick("LinkedIn")}
+          >
             <FaLinkedinIn className="text-white" size={20} />
           </a>
-          <a href="https://github.com/FevenSeyfu" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
+          <a
+            href="https://github.com/FevenSeyfu"
+            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
+            onClick={() => handleLinkClick("Github")}
+          >
             <FaGithub className="text-white" size={20} />
           </a>
-          <a href="mailto:fevensey@gmail.com" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
+          <a
+            href="mailto:fevensey@gmail.com"
+            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
+            onClick={() => handleLinkClick("Email")}
+          >
             <HiOutlineMail className="text-white" size={20} />
           </a>
-          <a href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing" className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500">
+          <a
+            href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing"
+            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
+            onClick={() => handleLinkClick("Google Drive - resume")}
+          >
             <BsFillPersonLinesFill className="text-white" size={20} />
           </a>
         </div>

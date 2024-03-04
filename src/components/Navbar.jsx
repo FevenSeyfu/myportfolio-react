@@ -5,6 +5,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import Logo from "../assets/logos/logo.png";
 import LogoMobile from "../assets/logos/logo.png";
+import ReactGA from "react-ga4";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -20,6 +21,13 @@ const Navbar = () => {
     handleclick();
   };
 
+  // GA tracker for click on social links
+  const handleLinkClick = (platform) => {
+    ReactGA.event({
+      category: "Social Link",
+      action: `Clicked on ${platform}`,
+    });
+  };
   return (
     <div className="fixed w-full h-[80px]  flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-800 z-10">
       {/* logo */}
@@ -77,6 +85,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://www.linkedin.com/in/fevenseyfu/"
+              onClick={() => handleLinkClick("LinkedIn")}
             >
               Linkedin{" "}
               <span className="bg-red-600 p-2  rounded-full hover:bg-none">
@@ -88,6 +97,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://github.com/FevenSeyfu"
+              onClick={() => handleLinkClick("Github")}
             >
               Github{" "}
               <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
@@ -99,6 +109,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="mailto:fevensey@gmail.com"
+              onClick={() => handleLinkClick("Email")}
             >
               E-mail{" "}
               <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
@@ -110,8 +121,9 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold text-lg pl-2"
               href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing"
+              onClick={() => handleLinkClick("Google Drive - resume")}
             >
-              Resume {" "}
+              Resume{" "}
               <span className="bg-red-600 p-2 ml-3 rounded-full hover:bg-none">
                 <BsFillPersonLinesFill size={30} />
               </span>
