@@ -1,11 +1,15 @@
 import React from "react";
+import ReactGA from "react-ga4";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Hero = () => {
+  const handleMouseEnter = () => {
+    ReactGA.send({ hitType: 'event', eventCategory: 'Hero', eventAction: 'view' });
+  };
   return (
-    <div name="home" className="w-full h-screen bg-[#0a192f]">
+    <div name="home" className="w-full h-screen bg-[#0a192f]" onMouseEnter={handleMouseEnter}>
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full gap-2 pt-4">
         <p className="text-[#ccd6f6]">Hey There, I'm</p>
         <h2 className="text-red-400 text-2xl sm:text-5xl font-bold">

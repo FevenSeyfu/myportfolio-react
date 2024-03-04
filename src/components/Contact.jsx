@@ -1,10 +1,19 @@
 import React from "react";
+import ReactGA from "react-ga4";
 
 const Contact = () => {
+  const handleMouseEnter = () => {
+    ReactGA.send({
+      hitType: "event",
+      eventCategory: "Contact",
+      eventAction: "view",
+    });
+  };
   return (
     <div
       name="contact"
       className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
+      onMouseEnter={handleMouseEnter}
     >
       <form
         method="POST"
@@ -20,27 +29,27 @@ const Contact = () => {
             like to chat please get in touch.
           </p>
         </div>
-          <input
-            type="text"
-            className="bg-[#ccd6f] p-2 text-black placeholder-slate-700"
-            placeholder="Full Name"
-            name="name"
-          />
-          <input
-            className="my-4 p-2 text-black focus:outline-red-500 bg-[#ccd6f6] placeholder-slate-700"
-            type="Your E-mail"
-            placeholder="Email"
-            name="email"
-          />
-          <textarea
-            className="bg-[#ccd6f6] p-2 text-black focus:outline-red-500 placeholder-slate-700"
-            name="message"
-            rows="5"
-            placeholder="Message"
-          ></textarea>
-          <button className="text-white border-2 hover:bg-red-600 hover:border-red-600 px-4 py-3 my-8 mx-auto flex items-center">
-            Get in touch!
-          </button>
+        <input
+          type="text"
+          className="bg-[#ccd6f] p-2 text-black placeholder-slate-700"
+          placeholder="Full Name"
+          name="name"
+        />
+        <input
+          className="my-4 p-2 text-black focus:outline-red-500 bg-[#ccd6f6] placeholder-slate-700"
+          type="Your E-mail"
+          placeholder="Email"
+          name="email"
+        />
+        <textarea
+          className="bg-[#ccd6f6] p-2 text-black focus:outline-red-500 placeholder-slate-700"
+          name="message"
+          rows="5"
+          placeholder="Message"
+        ></textarea>
+        <button className="text-white border-2 hover:bg-red-600 hover:border-red-600 px-4 py-3 my-8 mx-auto flex items-center">
+          Get in touch!
+        </button>
       </form>
     </div>
   );

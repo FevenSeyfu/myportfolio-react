@@ -1,5 +1,5 @@
 import React from "react";
-
+import ReactGA from "react-ga4";
 import HTML from "../assets/icons/html.png";
 import CSS from "../assets/icons/css.png";
 import JavaScript from "../assets/icons/javascript.png";
@@ -10,8 +10,11 @@ import Tailwind from "../assets/icons/tailwind.png";
 import Mongo from "../assets/icons/mongo.png";
 
 const Skills = () => {
+  const handleMouseEnter = () => {
+    ReactGA.send({ hitType: 'event', eventCategory: 'Skills', eventAction: 'view' });
+  };
   return (
-    <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300">
+    <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300" onMouseEnter={handleMouseEnter}>
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full">
         <div>
           <p className="text-4xl font-bold inline border-b-4
