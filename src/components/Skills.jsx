@@ -11,7 +11,10 @@ import Mongo from "../assets/icons/mongo.png";
 
 const Skills = () => {
   const handleMouseEnter = () => {
-    ReactGA.send({ hitType: 'event', eventCategory: 'Skills', eventAction: 'view' });
+    ReactGA.event({
+      category: "Section View",
+      action: "Viewed Skills Section",
+    });
   };
   return (
     <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300" onMouseEnter={handleMouseEnter}>

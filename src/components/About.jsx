@@ -3,7 +3,10 @@ import ReactGA from "react-ga4";
 
 const About = () => {
   const handleMouseEnter = () => {
-    ReactGA.send({ hitType: 'event', eventCategory: 'About', eventAction: 'view' });
+    ReactGA.event({
+      category: "Section View",
+      action: "Viewed About Section",
+    });
   };
   
   return (

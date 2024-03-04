@@ -6,7 +6,10 @@ import ReactGA from "react-ga4";
 const Works = () => {
   const project = data;
   const handleMouseEnter = () => {
-    ReactGA.send({ hitType: 'event', eventCategory: 'Projects', eventAction: 'view' });
+    ReactGA.event({
+      category: "Section View",
+      action: "Viewed Portfolio section Section",
+    });
   };
   return (
     <div
