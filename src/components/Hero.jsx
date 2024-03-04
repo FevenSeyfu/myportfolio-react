@@ -6,10 +6,9 @@ import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Hero = () => {
   const handleMouseEnter = () => {
-    ReactGA.send({
-      hitType: "event",
-      eventCategory: "Hero",
-      eventAction: "view",
+    ReactGA.event({
+      category: "Section View",
+      action: "Viewed Hero Section",
     });
   };
   const handleLinkClick = (platform) => {
