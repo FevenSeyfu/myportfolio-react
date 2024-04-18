@@ -18,9 +18,9 @@ const Works = () => {
       onMouseEnter={handleMouseEnter}>
       <div className="max-w-[1200px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-4 md:ml-16">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-red-600">
-            Projects
-          </p>
+          <h1 className="text-4xl font-bold inline border-b-4 text-gray-300 border-red-600">
+            Portfolio
+          </h1>
           <p className="py-2">// Check out some of my recent Projects</p>
         </div>
         <ProjectCarousel projects={project}/>
