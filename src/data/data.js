@@ -2,6 +2,8 @@ import QuillHub from '../assets/projects/Quill-hub.png'
 import ScrumFlow from '../assets/projects/scrum-flow.png'
 import LandingPage from '../assets/projects/manage-landing-page.png'
 import RestCountries from '../assets/projects/rest-countries.png'
+import FrontendMentor from '../assets/projects/FrontendMentor.png'
+
 export const data=[
     {
         id:1,
@@ -53,6 +55,19 @@ export const data=[
         technologies: [
             'MERN',
             'JWT',
+            'TAILWINDCSS',
+        ]
+    },
+    {
+        id:5,
+        name:"Frontend Mentor Solution",
+        image:FrontendMentor,
+        description:"Explore my hands-on projects from Frontend Mentor, where I completed a range of web development projects from simple UI components to multi-page web apps.I've grown my skills and creativity.and I have learned to understand design files convert design to responsive and accessible code.",
+        github:"https://github.com/FevenSeyfu/Frontend-mentor",
+        live:"https://fevenseyfu.github.io/Frontend-mentor/",
+        technologies: [
+            'HTML-CSS-JS',
+            'React',
             'TAILWINDCSS',
         ]
     },

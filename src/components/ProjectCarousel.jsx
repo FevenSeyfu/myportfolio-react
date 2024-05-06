@@ -34,15 +34,15 @@ const ProjectCarousel = ({ projects }) => {
           <div
             className={`flex flex-col ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } gap-8 md:gap-4 md:mx-16 items-center justify-center h-[30rem] md:h-[20rem]`}
+            } gap-8 md:gap-4  md:mx-16 md:mb-4 mt-2 items-center justify-center `}
           >
             <img
               src={item.image}
               alt={`${item.name} image`}
               className="md:w-3/6 md:h-[25rem] w-[15rem]"
             />
-            <div className="md:w-3/6 h-full gap-4 md:gap-8 flex flex-col mx-4">
-              <h2 className="text-4xl text-red-600 font-bold">
+            <div className="flex flex-col  md:w-3/6 h-full gap-4 md:gap-2 mx-12 md:mx-4">
+              <h2 className="text-2xl md:text-4xl text-red-600 font-bold">
                 {item.name.toUpperCase()}
               </h2>
               <p className="line-clamp-2 sm:line-clamp-none">
@@ -94,12 +94,12 @@ const ProjectCarousel = ({ projects }) => {
       </button>
 
       {/* Dot Slider */}
-      <div className="flex my-2">
+      <div className="flex mt-24 md:mt-2">
         {projects.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 mx-1  md:mt-12 border-2 rounded-full border-red-600 hover:border-white ${
+            className={`w-3 h-3 mx-1  md:my-6 border-2 rounded-full border-red-600 hover:border-white ${
               index === currentSlide ? "bg-red-600" : "opacity-50"
             } focus:outline-none`}
           ></button>

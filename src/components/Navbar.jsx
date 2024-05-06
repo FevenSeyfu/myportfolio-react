@@ -29,11 +29,12 @@ const Navbar = () => {
     });
   };
   return (
-    <div className="fixed w-full h-[80px]  flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md shadow-gray-800 z-10">
+    <div className="fixed w-full h-20  flex justify-between items-center bg-[#0a192f] text-gray-300  z-10 px-8 md:px-12">
       {/* logo */}
       <div>
-        <img src={Logo} alt="site logo" className="hidden md:flex w-[80px]" />
-        <img src={LogoMobile} alt="site logo" className="md:hidden w-[50px]" />
+        {/* <img src={Logo} alt="site logo" className="hidden md:flex w-[80px]" />
+        <img src={LogoMobile} alt="site logo" className="md:hidden w-[50px]" /> */}
+        <h1 className="text-2xl font-Croissant  text-red-600 italic">Feven S.</h1>
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
