@@ -22,20 +22,20 @@ const Hero = () => {
   return (
     <div
       name="home"
-      className="w-full h-screen bg-[#0a192f] pt-40 md:pt-24 lg:pt-24 lg:px-[5%] flex flex-row gap-12"
+      className="w-full h-screen bg-[#0a192f] pt-10 md:pt-24 lg:pt-24 lg:px-[5%] flex flex-row gap-24"
       onMouseEnter={handleMouseEnter}
     >
       <section className="w-full  mx-auto px-8 flex flex-col md:h-full justify-center gap-2">
-        <p className="text-[#ccd6f6]">Hey There, I'm</p>
+        <p className="text-[#ccd6f6] text-md md:text-lg lg:text-xl">Hey There, I'm</p>
         <div>
-          <h2 className="text-red-400 text-xl lg:text-2xl font-bold">
+          <h2 className="text-red-400 text-xl md:text-2xl lg:text-4xl font-bold">
             Feven Seyfu
           </h2>
-          <h1 className="text-red-600 text-3xl lg:text-3xl font-bold">
+          <h1 className="text-red-600 text-4xl md:4xl lg:text-5xl font-bold">
             I'm a Full Stack Developer.
           </h1>
         </div>
-        <p className=" text-gray-300 text-md md:text-lg py-4 max-w-[700px]">
+        <p className=" text-gray-300 text-md md:text-xl lg:text-2xl py-4 lg:max-w-[900px]">
           With hands-on experience in remote software development. I've built
           scalable{" "}
           <a
@@ -66,7 +66,7 @@ const Hero = () => {
             Get in Touch!
           </a>
         </p>
-        <div className="flex gap-2 md:hidden">
+        <div className="flex gap-2 my-4 md:hidden">
           <a
             href="https://www.linkedin.com/in/fevenseyfu/"
             className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
@@ -99,13 +99,13 @@ const Hero = () => {
         <div className="flex fle-row gap-2 md:gap-4 lg:gap-12 items-center text-base lg:text-xl">
           <a
             href="https://drive.google.com/file/d/1RAFSlRP88BpNChu9Ns5iYck7wCgalOAu/view?usp=drive_link"
-            className="text-white border-2 px-3 md:px-6 py-1 md:py-3 my-2 flex items-center rounded-md hover:bg-red-600 hover:border-red-600"
+            className="text-white border-2 px-3 md:px-6 py-3 my-2 flex items-center rounded-md  hover:border-red-600 hover:text-red-600" 
           >
             Get Resume
           </a>
 
           <Link to="Portfolio" smooth={true} duration={500}>
-            <button className="bg-red-600 text-white hover:text-red-600  hover:bg-[#0a192f] hover:border-2 hover:border-red-600 group  px-3 md:px-6 py-1 md:py-3 my-2 flex items-center rounded-md ">
+            <button className="bg-red-600 border-red-600 text-white hover:text-red-600  hover:bg-[#0a192f] border-2 hover:border-red-600 group  px-3 md:px-6 py-3 my-2 flex items-center rounded-md ">
               View Work
               <span className="group-hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-3" />
@@ -114,7 +114,6 @@ const Hero = () => {
           </Link>
         </div>
       </section>
-      {/* <aside className="hidden lg:block rounded-2xl shadow-2xl shadow-red-400 w-1/2 h-[25rem] my-auto"></aside> */}
     </div>
   );
 };
