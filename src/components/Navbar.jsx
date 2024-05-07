@@ -39,12 +39,12 @@ const Navbar = () => {
         {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li key={section}>
             <Link
-              activeClass="text-red-600 text-xl"
+              activeClass="text-red-600 border-b-4 border-red-600 text-xl"
               to={section}
               spy={true}
               smooth={true}
               duration={500}
-              className="text-xl font-bold hover:text-red-400 hover:border-b-2 border-red-600 pb-7"
+              className="text-xl font-bold hover:text-red-400 hover:border-b-4 border-red-400 pb-7"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
