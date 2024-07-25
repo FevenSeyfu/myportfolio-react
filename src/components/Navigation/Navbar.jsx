@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
       <div className="fixed w-full h-16  flex justify-between items-center bg-primary-dark-blue text-gray-300  z-10 px-8 md:px-12">
         {/* logo */}
-          <h1 className="text-2xl font-Croissant  text-primary-dark-red italic">
+          <h1 className="text-2xl font-croissant  text-primary-dark-red italic">
             Feven S.
           </h1>
         <div>
