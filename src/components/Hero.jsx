@@ -4,6 +4,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
+import SocialLinks from "./Navigation/SocialLinks";
 const Hero = () => {
   // google analytics
   const handleMouseEnter = () => {
@@ -67,34 +68,7 @@ const Hero = () => {
           </a>
         </p>
         <div className="flex gap-2 my-4 md:hidden">
-          <a
-            href="https://www.linkedin.com/in/fevenseyfu/"
-            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
-            onClick={() => handleLinkClick("LinkedIn")}
-          >
-            <FaLinkedinIn className="text-white" size={20} />
-          </a>
-          <a
-            href="https://github.com/FevenSeyfu"
-            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
-            onClick={() => handleLinkClick("Github")}
-          >
-            <FaGithub className="text-white" size={20} />
-          </a>
-          <a
-            href="mailto:fevenseyfu00@gmail.com"
-            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
-            onClick={() => handleLinkClick("Email")}
-          >
-            <HiOutlineMail className="text-white" size={20} />
-          </a>
-          <a
-            href="https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing"
-            className="bg-red-600 rounded-full p-2 hover:animate-bounce duration-500"
-            onClick={() => handleLinkClick("Google Drive - resume")}
-          >
-            <BsFillPersonLinesFill className="text-white" size={20} />
-          </a>
+          <SocialLinks handleLinkClick={handleLinkClick} />
         </div>
         <div className="flex fle-row gap-2 md:gap-4 lg:gap-12 items-center text-base lg:text-xl">
           <a
