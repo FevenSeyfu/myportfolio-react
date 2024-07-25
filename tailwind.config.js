@@ -6,9 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary-dark-blue': "#0a192f",
+        'primary-dark-red': '#dc2626',
+        'secondary-lighter-red': '#f87171',
+      },
       fontFamily: {
-        Croissant: ["Croissant One", "serif"]
-      }
+        croissant: ["Croissant One", "serif"]
+      },
     },
   },
   plugins: [],

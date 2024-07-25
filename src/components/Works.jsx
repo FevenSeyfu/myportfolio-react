@@ -14,11 +14,11 @@ const Works = () => {
   return (
     <div
       name="Portfolio"
-      className="w-full pt-2 md:pt-20 text-gray-300 bg-[#0a192f]"
+      className="w-full pt-2 md:pt-20 text-gray-300 bg-primary-dark-blue"
       onMouseEnter={handleMouseEnter}>
       <div className="max-w-[1200px] mx-auto p-4 flex flex-col justify-center w-full ">
         <div className="pb-2 md:ml-16">
-          <h1 className="text-4xl font-bold inline border-b-4 text-gray-300 border-red-600">
+          <h1 className="text-4xl font-bold inline border-b-4 text-gray-300 border-primary-dark-red">
             Portfolio
           </h1>
           <p className="pt-2">// Check out some of my recent Projects</p>

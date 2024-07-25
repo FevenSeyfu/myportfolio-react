@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, animateScroll as scroller } from "react-scroll";
-import ReactGA from "react-ga4";
 import SocialLinks from "./SocialLinks";
 
 const Navbar = () => {
@@ -18,57 +17,52 @@ const Navbar = () => {
     handleclick();
   };
 
-  // GA tracker for click on social links
-  const handleLinkClick = (platform) => {
-    ReactGA.event({
-      category: "Social Link",
-      action: `Clicked on ${platform}`,
-    });
-  };
   return (
-    <div className="fixed w-full h-20  flex justify-between items-center bg-[#0a192f] text-gray-300  z-10 px-8 md:px-12">
-      {/* logo */}
-      <div>
-        <h1 className="text-2xl font-Croissant  text-red-600 italic">
-          Feven S.
-        </h1>
-      </div>
-      {/* menu */}
-      <ul className="hidden md:flex">
-        {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
-          <li key={section}>
-            <Link
-              activeClass="text-red-600 border-b-4 border-red-600 text-xl"
-              to={section}
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="text-xl font-bold hover:text-red-400 hover:border-b-4 border-red-400 pb-7"
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {/* Hamburger */}
-      <div
-        onClick={handleclick}
-        className="md:hidden text-3xl z-10 hover:text-red-600"
-      >
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
-      {/* Mobile menu */}
-      <ul
+      <div className="fixed w-full h-16  flex justify-between items-center bg-primary-dark-blue text-gray-300  z-10 px-8 md:px-12">
+        {/* logo */}
+          <h1 className="text-2xl font-Croissant  text-primary-dark-red italic">
+            Feven S.
+          </h1>
+        <div>
+          {/* menu */}
+          <ul className="hidden md:flex flex-row gap-8">
+            {["home", "about", "Portfolio", "skills", "contact"].map(
+              (section) => (
+                <li key={section}>
+                  <Link
+                    activeClass="text-primary-dark-red border-b-4 border-primary-dark-red text-xl"
+                    to={section}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className="text-xl font-bold hover:text-secondary-lighter-red hover:border-b-4 border-secondary-lighter-red pb-7"
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+          {/* Hamburger */}
+          <div
+            onClick={handleclick}
+            className="md:hidden text-2xl z-10 hover:text-primary-dark-red"
+          >
+            {!nav ? <FaBars /> : <FaTimes />}
+          </div>
+        </div>
+        {/* Mobile menu */}
+        <ul
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+            : "absolute top-16 right-0 w-[75%] h-screen bg-primary-dark-blue flex flex-col items-center px-8 md:px-12"
         }
       >
         {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li
             key={section}
-            className="py-6 text-4xl w-full text-center hover:bg-red-600 "
+            className="py-2 text-2xl w-full text-right text-white  hover:bg-primary-dark-red "
           >
             <span onClick={() => scrollTo(section)}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -76,11 +70,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      {/* social icons */}
-      <div className="hidden lg:flex">
-        <SocialLinks handleLinkClick={handleclick} />
       </div>
-    </div>
   );
 };
 

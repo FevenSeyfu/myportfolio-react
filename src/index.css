@@ -5,14 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-      @apply font-[Raleway];
-  }
-  li {
-      @apply px-4;
-      @apply cursor-pointer
-  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .content-div {

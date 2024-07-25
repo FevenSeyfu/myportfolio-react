@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
+      className="w-full h-screen bg-primary-dark-blue flex justify-center items-center p-4"
       onMouseEnter={handleMouseEnter}
     >
       <form
@@ -20,7 +20,7 @@ const Contact = () => {
         className="flex flex-col max-w-[400px] w-full text-gray-300"
       >
         <div className="pb-8 mt-[80px]">
-          <p className="text-4xl font-bold inline border-b-4 border-red-600  text-gray-300">
+          <p className="text-4xl font-bold inline border-b-4 border-primary-dark-red  text-gray-300">
             Contact
           </p>
           <p className="text-gray-300 py-4">
@@ -46,7 +46,7 @@ const Contact = () => {
           rows="5"
           placeholder="Message"
         ></textarea>
-        <button className="text-white border-2 hover:bg-red-600 hover:border-red-600 px-4 py-3 my-8 mx-auto flex items-center">
+        <button className="text-white border-2 hover:bg-primary-dark-red hover:border-primary-dark-red px-4 py-3 my-8 mx-auto flex items-center">
           Get in touch!
         </button>
       </form>
