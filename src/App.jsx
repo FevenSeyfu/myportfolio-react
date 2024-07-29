@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero'
+import Hero from './components/Hero/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Works from './components/Works'
 import Contact from './components/Contact'
 import ReactGA from "react-ga4";
+import Layout from './components/Layout/Layout'
 
 const App = () => {
   useEffect(() => {
@@ -13,14 +13,13 @@ const App = () => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <Hero />
       <About />
       <Works />
       <Skills />
       <Contact />
-    </div>
+    </Layout>
   )
 }
 

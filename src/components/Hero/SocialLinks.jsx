@@ -35,13 +35,13 @@ const SocialLinks = ({ handleLinkClick }) => (
     <div className="hidden md:flex flex-col fixed top-[35%] right-0 z-10">
       <ul>
         {socialLinks.map(({ id, href, socialIcon, label }) => (
-          <li key={id} className="w-[160px] h-16 flex justify-start items-center">
+          <li key={id} className="w-[160px] h-12 flex gap-2 items-center">
             <a
-              className="w-[160px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl"
+              className="w-[160px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl "
               href={href}
               onClick={() => handleLinkClick(label)}
             >
-              <span className="bg-primary-dark-red p-3 rounded-full hover:bg-none md:text-xl lg:text-2xl">
+              <span className="bg-primary-dark-red p-2 rounded-full hover:bg-none text-2xl">
                 {socialIcon}
               </span>
               <span className="whitespace-nowrap pr-2">{label}</span>

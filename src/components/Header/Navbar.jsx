@@ -17,24 +17,20 @@ const Navbar = () => {
   };
 
   return (
-      <div className="fixed w-full h-16  flex justify-between items-center bg-primary-dark-blue text-gray-300  z-10 px-8 md:px-12">
-        {/* logo */}
-          <h1 className="text-2xl font-croissant  text-primary-dark-red italic">
-            Feven S.
-          </h1>
-        <div>
+      <>
+        <nav>
           {/* menu */}
-          <ul className="hidden lg:flex flex-row gap-8">
+          <ul className="hidden md:flex flex-row gap-8">
             {["home", "about", "Portfolio", "skills", "contact"].map(
               (section) => (
                 <li key={section}>
                   <Link
-                    activeClass="text-primary-dark-red border-b-4 border-primary-dark-red text-xl"
+                    activeClass="text-primary-dark-red border-b-4 border-primary-dark-red text-lg"
                     to={section}
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className="text-xl font-bold hover:text-secondary-lighter-red hover:border-b-4 border-secondary-lighter-red pb-7"
+                    className="text-lg font-bold hover:text-secondary-lighter-red hover:border-b-4 border-secondary-lighter-red pb-7"
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </Link>
@@ -45,11 +41,11 @@ const Navbar = () => {
           {/* Hamburger */}
           <div
             onClick={handleclick}
-            className="lg:hidden text-2xl z-10 hover:text-primary-dark-red"
+            className="md:hidden text-2xl z-10 hover:text-primary-dark-red"
           >
             {!nav ? <FaBars /> : <FaTimes />}
           </div>
-        </div>
+        </nav>
         {/* Mobile menu */}
         <ul
         className={
@@ -69,7 +65,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      </div>
+      </>
   );
 };
 
