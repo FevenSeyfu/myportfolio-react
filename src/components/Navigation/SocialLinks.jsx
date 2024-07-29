@@ -7,29 +7,25 @@ const socialLinks = [
   {
     id: "linkedin",
     href: "https://www.linkedin.com/in/fevenseyfu/",
-    iconDesktop: <FaLinkedin size={30} />,
-    iconMobile: <FaLinkedinIn className="text-white" size={20} />,
+    socialIcon: <FaLinkedin />,
     label: "Linkedin",
   },
   {
     id: "github",
     href: "https://github.com/FevenSeyfu",
-    iconDesktop: <FaGithub size={30} />,
-    iconMobile: <FaGithub className="text-white" size={20} />,
+    socialIcon: <FaGithub />,
     label: "Github",
   },
   {
     id: "email",
     href: "mailto:fevenseyfu00@gmail.com",
-    iconDesktop: <HiOutlineMail size={30} />,
-    iconMobile: <HiOutlineMail className="text-white" size={20} />,
+    socialIcon: <HiOutlineMail />,
     label: "E-mail",
   },
   {
     id: "resume",
     href: "https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing",
-    iconDesktop: <BsFillPersonLinesFill size={30} />,
-    iconMobile: <BsFillPersonLinesFill className="text-white" size={20} />,
+    socialIcon: <BsFillPersonLinesFill />,
     label: "Resume",
   },
 ];
@@ -38,34 +34,31 @@ const SocialLinks = ({ handleLinkClick }) => (
   <>
     <div className="hidden md:flex flex-col fixed top-[35%] right-0">
       <ul>
-        {socialLinks.map(({ id, href, iconDesktop, label }) => (
-          <li
-            key={id}
-            className="w-[160px] h-[60px] flex justify-between items-center mr-[-100px] hover:mr-[-10px] duration-300 hover:rounded-2xl hover:bg-primary-dark-red"
-          >
+        {socialLinks.map(({ id, href, socialIcon, label }) => (
+          <li key={id} className="w-[180px] h-20 flex justify-start items-center">
             <a
-              className="flex items-center gap-4  w-full text-gray-300 font-bold text-lg"
+              className="w-[180px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-2xl"
               href={href}
               onClick={() => handleLinkClick(label)}
             >
-              <span className="bg-primary-dark-red p-2  rounded-full hover:bg-none">
-                {iconDesktop}
+              <span className="bg-primary-dark-red p-3 rounded-full hover:bg-none text-4xl">
+                {socialIcon}
               </span>
-              {label}
+              <span className="whitespace-nowrap pr-2">{label}</span>
             </a>
           </li>
         ))}
       </ul>
     </div>
     <div className="flex gap-2 my-4 md:hidden">
-      {socialLinks.map(({ id, href, iconMobile }) => (
+      {socialLinks.map(({ id, href, socialIcon }) => (
         <a
           key={id}
           href={href}
           className="bg-primary-dark-red rounded-full p-2 hover:animate-bounce duration-500"
           onClick={() => handleLinkClick(id)}
         >
-          {iconMobile}
+          {socialIcon}
         </a>
       ))}
     </div>

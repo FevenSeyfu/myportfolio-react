@@ -25,7 +25,7 @@ const Navbar = () => {
           </h1>
         <div>
           {/* menu */}
-          <ul className="hidden md:flex flex-row gap-8">
+          <ul className="hidden lg:flex flex-row gap-8">
             {["home", "about", "Portfolio", "skills", "contact"].map(
               (section) => (
                 <li key={section}>
@@ -46,7 +46,7 @@ const Navbar = () => {
           {/* Hamburger */}
           <div
             onClick={handleclick}
-            className="md:hidden text-2xl z-10 hover:text-primary-dark-red"
+            className="lg:hidden text-2xl z-10 hover:text-primary-dark-red"
           >
             {!nav ? <FaBars /> : <FaTimes />}
           </div>
