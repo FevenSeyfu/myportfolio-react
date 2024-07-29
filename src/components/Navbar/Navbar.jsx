@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, animateScroll as scroller } from "react-scroll";
-import SocialLinks from "./SocialLinks";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactGA from "react-ga4";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import SocialLinks from "./Navigation/SocialLinks";
+import SocialLinks from "./Navbar/SocialLinks";
 const Hero = () => {
   // google analytics
   const handleMouseEnter = () => {

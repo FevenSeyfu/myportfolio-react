@@ -32,16 +32,16 @@ const socialLinks = [
 
 const SocialLinks = ({ handleLinkClick }) => (
   <>
-    <div className="hidden md:flex flex-col fixed top-[35%] right-0">
+    <div className="hidden md:flex flex-col fixed top-[35%] right-0 z-10">
       <ul>
         {socialLinks.map(({ id, href, socialIcon, label }) => (
-          <li key={id} className="w-[180px] h-20 flex justify-start items-center">
+          <li key={id} className="w-[160px] h-16 flex justify-start items-center">
             <a
-              className="w-[180px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-2xl"
+              className="w-[160px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl"
               href={href}
               onClick={() => handleLinkClick(label)}
             >
-              <span className="bg-primary-dark-red p-3 rounded-full hover:bg-none text-4xl">
+              <span className="bg-primary-dark-red p-3 rounded-full hover:bg-none md:text-xl lg:text-2xl">
                 {socialIcon}
               </span>
               <span className="whitespace-nowrap pr-2">{label}</span>
@@ -55,7 +55,7 @@ const SocialLinks = ({ handleLinkClick }) => (
         <a
           key={id}
           href={href}
-          className="bg-primary-dark-red rounded-full p-2 hover:animate-bounce duration-500"
+          className="bg-primary-dark-red text-white text-xl rounded-full p-2 hover:animate-bounce duration-500"
           onClick={() => handleLinkClick(id)}
         >
           {socialIcon}
