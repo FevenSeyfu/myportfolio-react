@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../data/data.js";
+import { data } from "../../data/data.js";
 import ProjectCarousel from "./ProjectCarousel.jsx";
 import ReactGA from "react-ga4";
 
@@ -16,8 +16,8 @@ const Works = () => {
       name="Portfolio"
       className="w-full pt-2 md:pt-20 text-gray-300 bg-primary-dark-blue"
       onMouseEnter={handleMouseEnter}>
-      <div className="max-w-[1200px] mx-auto p-4 flex flex-col justify-center w-full ">
-        <div className="pb-2 md:ml-16">
+      <div className="max-w-full mx-auto flex flex-col justify-center w-full text-left">
+        <div className="pb-2">
           <h1 className="text-4xl font-bold inline border-b-4 text-gray-300 border-primary-dark-red">
             Portfolio
           </h1>

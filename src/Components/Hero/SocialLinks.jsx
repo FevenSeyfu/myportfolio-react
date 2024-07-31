@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
@@ -32,16 +32,16 @@ const socialLinks = [
 
 const SocialLinks = ({ handleLinkClick }) => (
   <>
-    <div className="hidden md:flex flex-col fixed top-[35%] right-0 z-10">
+    <div className="hidden md:flex flex-col absolute top-[35%] right-0 z-10">
       <ul>
         {socialLinks.map(({ id, href, socialIcon, label }) => (
-          <li key={id} className="w-[160px] h-12 flex gap-2 items-center">
+          <li key={id} className="w-[160px] h-12 flex flex-row items-center">
             <a
-              className="w-[160px] flex items-center gap-4 hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl "
+              className="w-[160px] flex items-center hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl"
               href={href}
               onClick={() => handleLinkClick(label)}
             >
-              <span className="bg-primary-dark-red p-2 rounded-full hover:bg-none text-2xl">
+              <span className="bg-primary-dark-red p-2 mr-2 rounded-full hover:bg-none text-2xl">
                 {socialIcon}
               </span>
               <span className="whitespace-nowrap pr-2">{label}</span>

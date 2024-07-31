@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Header = () => {
 
   return (
-      <header className="fixed w-full h-16  flex justify-between items-center bg-primary-dark-blue text-gray-300  z-10 px-8 md:px-12">
+      <header className="fixed w-full h-20 flex justify-between items-center bg-primary-dark-blue text-gray-300  z-10 px-8 md:px-12 lg:px-[5%]">
         {/* logo */}
           <h1 className="text-2xl font-croissant  text-primary-dark-red italic">
             Feven S.
