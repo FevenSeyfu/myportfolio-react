@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       name="home"
-      className="relative  h-screen flex flex-col justify-center overflow-x-hidden "
+      className="relative  h-screen pt-24 md:pr-[160px] flex flex-col  md:gap-4  justify-center overflow-x-hidden "
       onMouseEnter={handleMouseEnter}
     >
       <p className="text-[#ccd6f6] text-md md:text-lg lg:text-xl">

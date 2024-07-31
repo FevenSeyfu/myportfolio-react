@@ -18,7 +18,7 @@ const Skills = () => {
   };
   return (
     <div name="skills" className="w-full h-screen bg-primary-dark-blue text-gray-300" onMouseEnter={handleMouseEnter}>
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full">
+      <div className="mx-auto px-4 flex flex-col justify-center w-full h-full">
         <div>
           <p className="text-4xl font-bold inline border-b-4
         border-primary-dark-red ">

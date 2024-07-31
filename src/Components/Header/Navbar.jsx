@@ -11,7 +11,7 @@ const Navbar = () => {
       duration: 500,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -50,
+      // offset: -50,
     });
     handleclick();
   };
@@ -59,11 +59,8 @@ const Navbar = () => {
             key={section}
             className="py-2 text-2xl w-full text-left text-white  hover:bg-primary-dark-blue px-8 md:px-12"
           >
-            <Link to={section}
-                  spy={true}
-                  smooth={true}
-                  duration={500}>
-            {section.charAt(0).toUpperCase() + section.slice(1)}
+            <Link to={section} spy={true} smooth={true} duration={500}>
+              {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
           </li>
         ))}
