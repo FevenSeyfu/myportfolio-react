@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section
       name="contact"
-      className="w-full sm:pt-6 bg-primary-dark-blue flex flex-col items-center  justify-start md:flex-row gap-2 md:gap-8 md:items-start md:justify-center md:pr-12 lg:pr-[5%]"
+      className="w-full min-h-[calc(100vh-7rem)] sm:pt-12 md:pt-28 bg-primary-dark-blue flex flex-col items-center  justify-end md:flex-row gap-2 md:gap-8 md:items-start md:justify-center md:pr-12 lg:pr-[5%]"
       onMouseEnter={handleMouseEnter}
     >
       <div className="w-full md:w-1/2">

@@ -111,7 +111,7 @@ const ContactForm = () => {
         {formData.message.error && formData.message.touched && <ErrorMessage message={formData.message.error} />}
       </div>
       <button
-        className="text-white font-bold rounded-lg border-2 hover:bg-primary-dark-red hover:border-primary-dark-red px-4 py-3 my-6 md:my-8 outline-primary-dark-red disabled:cursor-not-allowed disabled:bg-gray-700 disabled:border-gray-800"
+        className="text-white font-bold rounded-lg border-2 hover:bg-primary-dark-red hover:border-primary-dark-red px-4 py-3 mb-6 md:mb-8 outline-primary-dark-red disabled:cursor-not-allowed disabled:bg-gray-700 disabled:border-gray-800"
         disabled={!isFormValid()}
       >
         Let's Collaborate!

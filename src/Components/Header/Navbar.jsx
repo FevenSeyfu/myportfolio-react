@@ -11,7 +11,7 @@ const Navbar = () => {
       duration: 500,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -50,
+      offset: -10,
     });
     handleclick();
   };
@@ -30,6 +30,7 @@ const Navbar = () => {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  isDynamic={true}
                   className="text-lg font-bold hover:text-secondary-lighter-red hover:border-b-4 border-secondary-lighter-red pb-7"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
