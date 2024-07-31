@@ -3,7 +3,7 @@ import Hero from './Components/Hero/Hero'
 import About from './Components/About'
 import Skills from './Components/Skills'
 import Works from './Components/Portfolio/Works'
-import Contact from './Components/Contact'
+import Contact from './Components/Contact/Contact'
 import ReactGA from "react-ga4";
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
