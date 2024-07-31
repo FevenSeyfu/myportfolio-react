@@ -11,7 +11,7 @@ const Navbar = () => {
       duration: 500,
       delay: 0,
       smooth: "easeInOutQuart",
-      // offset: -50,
+      offset: -50,
     });
     handleclick();
   };

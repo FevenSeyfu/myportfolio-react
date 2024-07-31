@@ -63,7 +63,7 @@ const ContactForm = () => {
     <form
       method="POST"
       action="https://formspree.io/f/mlevqpbd"
-      className="flex flex-col gap-4 items-center text-white placeholder:opacity-70"
+      className="w-full flex flex-col gap-4 items-start text-white placeholder:opacity-70"
     >
       <div className="w-full">
         <input
