@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="flex flex-col min-h-screen bg-primary-dark-blue">
       <Header />
-      <main className="w-full overflow-x-hidden flex-grow  pt-20  md:pt-24   md:pl-12 lg:pl-[5%]">
+      <main className="w-full overflow-x-hidden flex-grow px-8 pt-24 md:pr-0  md:pl-12 lg:pl-[5%]">
         <Hero />
         <About />
         <Works />
