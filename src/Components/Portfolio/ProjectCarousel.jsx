@@ -38,10 +38,10 @@ const ProjectCarousel = ({ projects }) => {
             <img
               src={item.image}
               alt={`${item.name} image`}
-              className="md:w-[485px] md:h-[366px] w-[10rem] h-auto"
-              width="485"
-              height="366"
-              style={{ aspectRatio: "485 / 366" }}
+              className="w-[calc(100vw-50%)] md:w-1/2 h-auto"
+              width={item.width}
+              height={item.height}
+              style={{ aspectRatio: `${item.width} / ${item.height}` }}
             />
             <div className="flex flex-col w-full  md:w-3/6 justify-center md:items-start gap-6 md:gap-4">
               <h2 className="text-xl md:text-4xl text-primary-dark-red font-bold">
@@ -91,14 +91,14 @@ const ProjectCarousel = ({ projects }) => {
 
       {/* Left and Right Arrow Buttons */}
       <button
-        className="absolute top-[10%] md:top-[30%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
+        className="absolute top-[20%] md:top-[30%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToPrevSlide}
         aria-label="Previous slide"
       >
         <FaArrowLeft />
       </button>
       <button
-        className="absolute top-[10%] md:top-[30%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
+        className="absolute top-[20%] md:top-[30%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToNextSlide}
         aria-label="Next slide"
       >
