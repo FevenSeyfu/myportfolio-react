@@ -9,7 +9,8 @@ export default {
       colors: {
         'primary-dark-blue': "#0a192f",
         'primary-dark-red': '#dc2626',
-        'secondary-lighter-red': '#f87171',
+        'light-red': '#fdb0b0',
+        'lighter-red': '#fecaca',
       },
       fontFamily: {
         croissant: ["Croissant One", "serif"]

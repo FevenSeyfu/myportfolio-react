@@ -17,8 +17,8 @@ const Skills = () => {
     });
   };
   return (
-    <div name="skills" className="w-full h-screen bg-primary-dark-blue text-gray-300" onMouseEnter={handleMouseEnter}>
-      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full">
+    <section name="skills" className="w-full h-screen bg-primary-dark-blue text-gray-300" onMouseEnter={handleMouseEnter}>
+      <div className="pt-24 md:pr-12 lg:pr-[5%] flex flex-col  justify-start h-full">
         <div>
           <p className="text-4xl font-bold inline border-b-4
         border-primary-dark-red ">
@@ -26,43 +26,43 @@ const Skills = () => {
           </p>
           <p className="py-4">//Technologies I have worked with</p>
         </div>
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-4">
+        <div className="w-full grid grid-cols-2  sm:grid-cols-4 gap-4 text-center py-4 md:py-24">
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={HTML} alt="HTML icon" />
-            <p className="my-2">HTML</p>
+            <img className="w-6 h-6 md:w-12 md:h-12  mx-auto" src={HTML} alt="HTML icon" />
+            <p className="m-2">HTML</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={CSS} alt="HTML icon" />
-            <p className="my-2">CSS</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={CSS} alt="HTML icon" />
+            <p className="m-2">CSS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={JavaScript} alt="HTML icon" />
-            <p className="my-2">JAVASCRIPT</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={JavaScript} alt="HTML icon" />
+            <p className="m-2">JAVASCRIPT</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={ReactImg} alt="HTML icon" />
-            <p className="my-2">REACT</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={ReactImg} alt="HTML icon" />
+            <p className="m-2">REACT</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={GitHub} alt="HTML icon" />
-            <p className="my-2">GITHUB</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={GitHub} alt="HTML icon" />
+            <p className="m-2">GITHUB</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={Node} alt="HTML icon" />
-            <p className="my-2">NODE JS</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={Node} alt="HTML icon" />
+            <p className="m-2">NODE JS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={Mongo} alt="HTML icon" />
-            <p className="my-2">MONGO DB</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={Mongo} alt="HTML icon" />
+            <p className="m-2">MONGO DB</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-12 mx-auto" src={Tailwind} alt="HTML icon" />
-            <p className="my-2">TAILWIND</p>
+            <img className="w-6 h-6 md:w-12 md:h-12   mx-auto" src={Tailwind} alt="HTML icon" />
+            <p className="m-2">TAILWIND</p>
           </div>
           
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
