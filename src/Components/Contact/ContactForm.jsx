@@ -113,6 +113,7 @@ const ContactForm = () => {
       <button
         className="text-white font-bold rounded-lg border-2 hover:bg-primary-dark-red hover:border-primary-dark-red px-4 py-3 mb-6 md:mb-8 outline-primary-dark-red disabled:cursor-not-allowed disabled:bg-gray-700 disabled:border-gray-800"
         disabled={!isFormValid()}
+       aria-label="Let's Collaborate"
       >
         Let's Collaborate!
       </button>

@@ -7,25 +7,25 @@ const socialLinks = [
   {
     id: "linkedin",
     href: "https://www.linkedin.com/in/fevenseyfu/",
-    socialIcon: <FaLinkedin />,
+    socialIcon: <FaLinkedin aria-hidden="true" />,
     label: "Linkedin",
   },
   {
     id: "github",
     href: "https://github.com/FevenSeyfu",
-    socialIcon: <FaGithub />,
+    socialIcon: <FaGithub aria-hidden="true" />,
     label: "Github",
   },
   {
     id: "email",
     href: "mailto:fevenseyfu00@gmail.com",
-    socialIcon: <HiOutlineMail />,
+    socialIcon: <HiOutlineMail aria-hidden="true" />,
     label: "E-mail",
   },
   {
     id: "resume",
     href: "https://drive.google.com/drive/folders/1c4RNtiJOljbwXU03DlUrGGfFYBDdYYVM?usp=sharing",
-    socialIcon: <BsFillPersonLinesFill />,
+    socialIcon: <BsFillPersonLinesFill aria-hidden="true" />,
     label: "Resume",
   },
 ];
@@ -40,6 +40,7 @@ const SocialLinks = ({ handleLinkClick }) => (
               className="w-[160px] flex items-center hover:gap-2 transform translate-x-[120px] hover:translate-x-0 duration-300 hover:rounded-xl hover:bg-primary-dark-red text-white font-bold text-xl"
               href={href}
               onClick={() => handleLinkClick(label)}
+              aria-label={`Link to ${label}`}
             >
               <span className="bg-primary-dark-red p-2 mr-2 rounded-full hover:bg-none text-2xl">
                 {socialIcon}
@@ -51,12 +52,13 @@ const SocialLinks = ({ handleLinkClick }) => (
       </ul>
     </div>
     <div className="flex gap-2 my-4 md:hidden">
-      {socialLinks.map(({ id, href, socialIcon }) => (
+      {socialLinks.map(({ id, href, socialIcon, label }) => (
         <a
           key={id}
           href={href}
           className="bg-primary-dark-red text-white text-xl rounded-full p-2 hover:animate-bounce duration-500"
           onClick={() => handleLinkClick(id)}
+          aria-label={`Link to ${label}`}
         >
           {socialIcon}
         </a>
