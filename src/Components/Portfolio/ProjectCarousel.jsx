@@ -36,7 +36,7 @@ const ProjectCarousel = ({ projects }) => {
             <img
               src={item.image}
               alt={`${item.name} image`}
-              className="w-1/3 md:w-1/2  md:h-auto "
+              className="w-3/2 md:w-1/2  md:h-auto "
               width={item.width}
               height={item.height}
               style={{ aspectRatio: `${item.width} / ${item.height}` }}
