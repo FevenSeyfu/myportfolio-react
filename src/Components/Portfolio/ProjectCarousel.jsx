@@ -31,9 +31,7 @@ const ProjectCarousel = ({ projects }) => {
           }`}
         >
           <div
-            className={`flex flex-col h-full lg:w-[80vw] ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } gap-4  md:mb-4 mt-2 items-center justify-center `}
+            className="flex flex-col h-full min-h-[70vh] lg:w-[80vw] md:flex-row gap-4  md:mb-4 mt-2 items-center justify-center "
           >
             <img
               src={item.image}
@@ -51,7 +49,7 @@ const ProjectCarousel = ({ projects }) => {
                 {item.description}
               </p>
               <ul
-                className="flex flex-row w-full items-start gap-2 md:gap-4 "
+                className="flex flex-row  flex-wrap w-full items-start gap-2 md:gap-4 "
                 id="tags"
               >
                 {item.technologies.map((tech, index) => (
@@ -106,7 +104,7 @@ const ProjectCarousel = ({ projects }) => {
       </button>
 
       {/* Dot Slider */}
-      <div className="flex mt-2">
+      <div className="flex md:bottom-0 mt-2">
         {projects.map((_, index) => (
           <button
             key={index}
