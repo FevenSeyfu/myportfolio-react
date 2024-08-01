@@ -38,9 +38,10 @@ const ProjectCarousel = ({ projects }) => {
             <img
               src={item.image}
               alt={`${item.name} image`}
-              className="md:w-3/6 md:h-[25rem] w-[10rem]"
-              width="240" 
-              height="400" 
+              className="md:w-[485px] md:h-[366px] w-[10rem] h-auto"
+              width="485"
+              height="366"
+              style={{ aspectRatio: "485 / 366" }}
             />
             <div className="flex flex-col w-full  md:w-3/6 justify-center md:items-start gap-6 md:gap-4">
               <h2 className="text-xl md:text-4xl text-primary-dark-red font-bold">
@@ -49,7 +50,10 @@ const ProjectCarousel = ({ projects }) => {
               <p className="line-clamp-5 sm:line-clamp-none">
                 {item.description}
               </p>
-              <ul className="flex flex-row w-full items-start gap-2 md:gap-4 " id="tags">
+              <ul
+                className="flex flex-row w-full items-start gap-2 md:gap-4 "
+                id="tags"
+              >
                 {item.technologies.map((tech, index) => (
                   <li
                     className="border-2 bg-black border-gray-700 text-lighter-red text-nowrap text-md md:text-lg font-bold py-2 md:py-1 px-2 rounded-md"
@@ -59,7 +63,10 @@ const ProjectCarousel = ({ projects }) => {
                   </li>
                 ))}
               </ul>
-              <div id="buttons" className="flex flex-row w-full items-start md:gap-8 gap-4">
+              <div
+                id="buttons"
+                className="flex flex-row w-full items-start md:gap-8 gap-4"
+              >
                 <a
                   href={item.live}
                   onClick={() => handleButtonClick(item.name, "live")}
