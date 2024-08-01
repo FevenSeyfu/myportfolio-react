@@ -64,13 +64,15 @@ const ProjectCarousel = ({ projects }) => {
                   href={item.live}
                   onClick={() => handleButtonClick(item.name, "live")}
                   className="flex flex-row items-center gap-2 text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-primary-dark-red bg-primary-dark-red hover:text-primary-dark-red hover:border-white hover:bg-white hover:cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  aria-label={`View live demo of ${item.name}`}
                 >
                   <FaLink size={20} /> Live
                 </a>
                 <a
                   href={item.github}
                   onClick={() => handleButtonClick(item.name, "code")}
-                  className="flex flex-row items-center gap-2text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-white hover:text-primary-dark-red hover:cursor-pointer hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  className="flex flex-row items-center gap-2 text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-white hover:text-primary-dark-red hover:cursor-pointer hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  aria-label={`View code of ${item.name}`}
                 >
                   <FaGithub size={20} /> Code
                 </a>
@@ -84,12 +86,14 @@ const ProjectCarousel = ({ projects }) => {
       <button
         className="absolute top-[10%] md:top-[30%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToPrevSlide}
+        aria-label="Previous slide"
       >
         <FaArrowLeft />
       </button>
       <button
         className="absolute top-[10%] md:top-[30%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToNextSlide}
+        aria-label="Next slide"
       >
         <FaArrowRight />
       </button>
@@ -103,6 +107,7 @@ const ProjectCarousel = ({ projects }) => {
             className={`w-3 h-3 mx-1 my-2 md:my-6 border-2 rounded-full border-primary-dark-red hover:border-white ${
               index === currentSlide ? "bg-primary-dark-red" : "opacity-50"
             } focus:outline-none`}
+            aria-label={`Go to slide ${index + 1}`}
           ></button>
         ))}
       </div>
