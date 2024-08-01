@@ -30,7 +30,7 @@ const Hero = () => {
         Hey There, I'm
       </p>
       <div>
-        <h2 className="text-secondary-lighter-red text-xl md:text-2xl lg:text-4xl font-bold">
+        <h2 className="text-light-red text-xl md:text-2xl lg:text-4xl font-bold">
           Feven Seyfu
         </h2>
         <h1 className="text-primary-dark-red text-4xl md:4xl lg:text-5xl font-bold">
@@ -42,7 +42,7 @@ const Hero = () => {
         scalable{" "}
         <a
           href="https://drive.google.com/file/d/1UNninKfbEY3o9QiSTstYagHJwaL7ITzo/view?usp=drive_link"
-          className="text-secondary-lighter-red hover:text-primary-dark-red"
+          className="text-lighter-red hover:text-primary-dark-red"
           aria-label="View Web Application"
         >
           Web Application
@@ -50,7 +50,7 @@ const Hero = () => {
         for a governmental organization, excelled in my{" "}
         <a
           href="https://drive.google.com/file/d/1YnPsy89JXayNF4c7nuTMg1fywsmzFMqW/view?usp=drive_link"
-          className="text-secondary-lighter-red hover:text-primary-dark-red"
+          className="text-lighter-red hover:text-primary-dark-red"
           aria-label="View Computer Engineering Degree"
         >
           Computer Engineering Degree
@@ -58,7 +58,7 @@ const Hero = () => {
         , and polished my skills at{" "}
         <a
           href="https://drive.google.com/file/d/13vZ9FqHuxbYWAjOH1ddba4agLXrrve-K/view?usp=drive_link"
-          className="text-secondary-lighter-red hover:text-primary-dark-red"
+          className="text-lighter-red hover:text-primary-dark-red"
           aria-label="View Microverse"
         >
           Microverse
@@ -66,7 +66,7 @@ const Hero = () => {
         . I'd love to discuss how I can bring my expertise to your team.{" "}
         <a
           href="mailto:fevenseyfu00@gmail.com"
-          className="text-secondary-lighter-red hover:text-primary-dark-red"
+          className="text-lighter-red hover:text-primary-dark-red"
           aria-label="Get in Touch via Email"
         >
           Get in Touch!

@@ -52,7 +52,7 @@ const ProjectCarousel = ({ projects }) => {
               <ul className="flex flex-row w-full items-start gap-2 md:gap-4 " id="tags">
                 {item.technologies.map((tech, index) => (
                   <li
-                    className="border-2 bg-black border-gray-700 text-secondary-lighter-red text-nowrap text-md md:text-lg font-bold py-2 md:py-1 px-2 rounded-md"
+                    className="border-2 bg-black border-gray-700 text-lighter-red text-nowrap text-md md:text-lg font-bold py-2 md:py-1 px-2 rounded-md"
                     key={index}
                   >
                     {tech}

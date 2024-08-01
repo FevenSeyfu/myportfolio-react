@@ -31,7 +31,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   isDynamic={true}
-                  className="text-lg font-bold hover:text-secondary-lighter-red hover:border-b-4 border-secondary-lighter-red pb-7 hover:cursor-pointer"
+                  className="text-lg font-bold hover:text-lighter-red hover:border-b-4 border-lighter-red pb-7 hover:cursor-pointer"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
         {["home", "about", "Portfolio", "skills", "contact"].map((section) => (
           <li
             key={section}
-            className="py-2 text-2xl w-full text-left text-white  hover:bg-primary-dark-blue px-8 md:px-12"
+            className="py-2 text-2xl w-full font-semibold text-left text-white  hover:bg-lighter-red hover:text-primary-dark-blue px-8 md:px-12"
           >
             <Link to={section} spy={true} smooth={true} duration={500}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
