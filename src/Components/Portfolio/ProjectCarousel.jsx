@@ -31,19 +31,19 @@ const ProjectCarousel = ({ projects }) => {
           }`}
         >
           <div
-            className={`flex flex-col ${
+            className={`flex flex-col h-full lg:w-[80vw] ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } gap-8 md:gap-4  md:mx-16 md:mb-4 mt-2 items-center justify-center `}
+            } gap-4  md:mb-4 mt-2 items-center justify-center `}
           >
             <img
               src={item.image}
               alt={`${item.name} image`}
-              className="w-[calc(100vw-50%)] md:w-1/2 h-auto"
+              className="w-1/3 md:w-1/2  md:h-auto "
               width={item.width}
               height={item.height}
               style={{ aspectRatio: `${item.width} / ${item.height}` }}
             />
-            <div className="flex flex-col w-full  md:w-3/6 justify-center md:items-start gap-6 md:gap-4">
+            <div className="flex flex-col w-full  md:w-1/2 justify-center md:items-start gap-4 md:gap-6">
               <h2 className="text-xl md:text-4xl text-primary-dark-red font-bold">
                 {item.name.toUpperCase()}
               </h2>
@@ -91,14 +91,14 @@ const ProjectCarousel = ({ projects }) => {
 
       {/* Left and Right Arrow Buttons */}
       <button
-        className="absolute top-[20%] md:top-[30%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
+        className="hidden lg:block absolute top-[40%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToPrevSlide}
         aria-label="Previous slide"
       >
         <FaArrowLeft />
       </button>
       <button
-        className="absolute top-[20%] md:top-[30%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
+        className="hidden lg:block absolute top-[40%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToNextSlide}
         aria-label="Next slide"
       >
@@ -106,7 +106,7 @@ const ProjectCarousel = ({ projects }) => {
       </button>
 
       {/* Dot Slider */}
-      <div className="flex mt-4 md:mt-2">
+      <div className="flex mt-2">
         {projects.map((_, index) => (
           <button
             key={index}

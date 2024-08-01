@@ -3,6 +3,7 @@ import ScrumFlow from '../assets/projects/scrum-flow.png'
 import LandingPage from '../assets/projects/manage-landing-page.png'
 import RestCountries from '../assets/projects/rest-countries.png'
 import FrontendMentor from '../assets/projects/FrontendMentor.png'
+import HealthCareDashboard from '../assets/projects/HealthCareDashboard.png'
 
 export const data=[
     {
@@ -69,6 +70,19 @@ export const data=[
             'HTML-CSS-JS',
             'React',
             'TAILWINDCSS',
+        ]
+    },
+    {
+        id:6,
+        name:"Health Care Dashboard",
+        image:HealthCareDashboard,
+        description:"A health card dashboard that fetches and displays overview of patient data from an API, with visualization of patients blood pleasure level with a chart, interactive UI and responsive designs",
+        github:"https://github.com/FevenSeyfu/Healthcare-Dashboard",
+        live:"https://tech-care-coalition.netlify.app/",
+        technologies: [
+            'HTML-CSS-JS',
+            'Chart.js',
+            'Axios',
         ]
     },
 
