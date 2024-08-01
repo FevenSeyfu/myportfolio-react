@@ -1,10 +1,17 @@
 import React from "react";
 import ReactGA from "react-ga4";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-scroll";
+import { scroller } from "react-scroll";
 import SocialLinks from "./SocialLinks";
 
 const Hero = () => {
+  const scrollToSection = () => {
+    scroller.scrollTo("Portfolio", {
+      duration: 500,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
   // google analytics
   const handleMouseEnter = () => {
     ReactGA.event({
@@ -82,17 +89,16 @@ const Hero = () => {
           Get Resume
         </a>
 
-        <Link to="Portfolio" smooth={true} duration={500} href="#Portfolio">
-          <button
-            className="bg-primary-dark-red border-primary-dark-red text-white hover:text-primary-dark-red hover:bg-primary-dark-blue border-2 hover:border-primary-dark-red group px-3 md:px-6 py-3 my-2 flex items-center rounded-md"
-            aria-label="View Work"
-          >
-            View Work
-            <span className="group-hover:rotate-90 duration-300">
-              <HiArrowNarrowRight className="ml-3" />
-            </span>
-          </button>
-        </Link>
+        <button
+          onClick={scrollToSection}
+          className="bg-primary-dark-red border-primary-dark-red text-white hover:text-primary-dark-red hover:bg-primary-dark-blue border-2 hover:border-primary-dark-red group px-3 md:px-6 py-3 my-2 flex items-center rounded-md"
+          aria-label="View Work"
+        >
+          View Work
+          <span className="group-hover:rotate-90 duration-300">
+            <HiArrowNarrowRight className="ml-3" />
+          </span>
+        </button>
       </div>
     </section>
   );
