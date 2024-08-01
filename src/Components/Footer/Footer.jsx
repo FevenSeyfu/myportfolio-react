@@ -10,6 +10,7 @@ const Footer = () => {
           <a
             href="https://fevenseyfu.tech/"
             aria-label="Feven's Portfolio"
+            className="font-semibold underline-offset-4  hover:cursor-pointer hover:underline"
           >
             Feven Seyfu
           </a>

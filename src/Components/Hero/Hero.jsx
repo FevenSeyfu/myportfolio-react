@@ -82,7 +82,7 @@ const Hero = () => {
           Get Resume
         </a>
 
-        <Link to="Portfolio" smooth={true} duration={500}>
+        <Link to="Portfolio" smooth={true} duration={500} href="#Portfolio">
           <button
             className="bg-primary-dark-red border-primary-dark-red text-white hover:text-primary-dark-red hover:bg-primary-dark-blue border-2 hover:border-primary-dark-red group px-3 md:px-6 py-3 my-2 flex items-center rounded-md"
             aria-label="View Work"

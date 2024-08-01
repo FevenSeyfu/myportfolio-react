@@ -5,17 +5,6 @@ import { Link, animateScroll as scroller } from "react-scroll";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleclick = () => setNav(!nav);
-
-  const scrollTo = (section) => {
-    scroller.scrollTo(section, {
-      duration: 500,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -10,
-    });
-    handleclick();
-  };
-
   return (
     <>
       <nav className="relative z-20">
@@ -32,6 +21,7 @@ const Navbar = () => {
                   duration={500}
                   isDynamic={true}
                   className="text-lg font-bold hover:text-lighter-red hover:border-b-4 border-lighter-red pb-7 hover:cursor-pointer"
+                  href={`#${section}`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </Link>
@@ -60,7 +50,7 @@ const Navbar = () => {
             key={section}
             className="py-2 text-2xl w-full font-semibold text-left text-white  hover:bg-lighter-red hover:text-primary-dark-blue px-8 md:px-12"
           >
-            <Link to={section} spy={true} smooth={true} duration={500}>
+            <Link to={section} spy={true} smooth={true} duration={500} href={`#${section}`}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
           </li>

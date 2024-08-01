@@ -104,7 +104,7 @@ const ProjectCarousel = ({ projects }) => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 mx-1 my-2 md:my-6 border-2 rounded-full border-primary-dark-red hover:border-white ${
+            className={`w-4 h-4 mx-1 my-2 md:my-6 border-2 rounded-full border-primary-dark-red hover:border-white ${
               index === currentSlide ? "bg-primary-dark-red" : "opacity-50"
             } focus:outline-none`}
             aria-label={`Go to slide ${index + 1}`}
