@@ -32,7 +32,8 @@ const Navbar = () => {
         {/* Hamburger */}
         <button
           onClick={handleclick}
-          className="md:hidden text-2xl z-20  text-white"
+          className="md:hidden text-2xl z-20 text-white"
+          aria-label={nav ? "Close menu" : "Open menu"}
         >
           {!nav ? <FaBars /> : <FaTimes />}
         </button>
@@ -50,7 +51,13 @@ const Navbar = () => {
             key={section}
             className="py-2 text-2xl w-full font-semibold text-left text-white  hover:bg-lighter-red hover:text-primary-dark-blue px-8 md:px-12"
           >
-            <Link to={section} spy={true} smooth={true} duration={500} href={`#${section}`}>
+            <Link
+              to={section}
+              spy={true}
+              smooth={true}
+              duration={500}
+              href={`#${section}`}
+            >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
           </li>
