@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaGithub, FaLink } from "react-icons/fa";
 import ReactGA from "react-ga4";
 
-
 const ProjectCarousel = ({ projects }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -23,7 +22,7 @@ const ProjectCarousel = ({ projects }) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center md:mt-8">
+    <div className="relative flex flex-col items-center justify-center mt-2 md:mt-8">
       {projects.map((item, index) => (
         <div
           key={index}
@@ -39,39 +38,41 @@ const ProjectCarousel = ({ projects }) => {
             <img
               src={item.image}
               alt={`${item.name} image`}
-              className="md:w-3/6 md:h-[25rem] w-[15rem]"
+              className="md:w-3/6 md:h-[25rem] w-[10rem]"
+              width="240" 
+              height="400" 
             />
-            <div className="flex flex-col  md:w-3/6 h-full gap-4 md:gap-2 mx-12 md:mx-4">
-              <h2 className="text-2xl md:text-4xl text-primary-dark-red font-bold">
+            <div className="flex flex-col w-full  md:w-3/6 justify-center md:items-start gap-6 md:gap-4">
+              <h2 className="text-xl md:text-4xl text-primary-dark-red font-bold">
                 {item.name.toUpperCase()}
               </h2>
-              <p className="line-clamp-2 sm:line-clamp-none">
+              <p className="line-clamp-5 sm:line-clamp-none">
                 {item.description}
               </p>
-              <ul className="flex flex-row gap-2" id="tags">
+              <ul className="flex flex-row w-full items-start gap-2 md:gap-4 " id="tags">
                 {item.technologies.map((tech, index) => (
                   <li
-                    className="bg-gray-700 text-secondary-lighter-red text-lg font-bold py-1 px-2 rounded-lg border-white hover:border-2"
+                    className="border-2 bg-black border-gray-700 text-secondary-lighter-red text-nowrap text-md md:text-lg font-bold py-2 md:py-1 px-2 rounded-md"
                     key={index}
                   >
                     {tech}
                   </li>
                 ))}
               </ul>
-              <div id="buttons" className="flex flex-row md:gap-8 gap-4">
+              <div id="buttons" className="flex flex-row w-full items-start md:gap-8 gap-4">
                 <a
                   href={item.live}
                   onClick={() => handleButtonClick(item.name, "live")}
-                  className="flex flex-row items-center gap-2 text-xl font-bold bg-primary-dark-red p-2 px-4 rounded-2xl hover:text-primary-dark-red hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  className="flex flex-row items-center gap-2 text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-primary-dark-red bg-primary-dark-red hover:text-primary-dark-red hover:border-white hover:bg-white hover:cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                 >
-                  <FaLink size={30} /> Live
+                  <FaLink size={20} /> Live
                 </a>
                 <a
                   href={item.github}
                   onClick={() => handleButtonClick(item.name, "code")}
-                  className="flex flex-row items-center gap-2 text-xl font-bold border-2 border-white p-2 px-4 rounded-2xl hover:text-primary-dark-red hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  className="flex flex-row items-center gap-2text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-white hover:text-primary-dark-red hover:cursor-pointer hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                 >
-                  <FaGithub size={30} /> Code
+                  <FaGithub size={20} /> Code
                 </a>
               </div>
             </div>
@@ -81,25 +82,25 @@ const ProjectCarousel = ({ projects }) => {
 
       {/* Left and Right Arrow Buttons */}
       <button
-        className="absolute top-[15%] md:top-[30%] left-4 bg-primary-dark-red rounded-full text-2xl p-2 hover:animate-bounce duration-150"
+        className="absolute top-[10%] md:top-[30%] left-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToPrevSlide}
       >
         <FaArrowLeft />
       </button>
       <button
-        className="absolute top-[15%] md:top-[30%] right-4 bg-primary-dark-red rounded-full text-2xl p-2 hover:animate-bounce duration-150"
+        className="absolute top-[10%] md:top-[30%] right-0 bg-primary-dark-red rounded-full text-lg md:text-2xl p-2 hover:animate-bounce duration-150"
         onClick={goToNextSlide}
       >
         <FaArrowRight />
       </button>
 
       {/* Dot Slider */}
-      <div className="flex mt-24 md:mt-2">
+      <div className="flex mt-4 md:mt-2">
         {projects.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 mx-1  md:my-6 border-2 rounded-full border-primary-dark-red hover:border-white ${
+            className={`w-3 h-3 mx-1 my-2 md:my-6 border-2 rounded-full border-primary-dark-red hover:border-white ${
               index === currentSlide ? "bg-primary-dark-red" : "opacity-50"
             } focus:outline-none`}
           ></button>

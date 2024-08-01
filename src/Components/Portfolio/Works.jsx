@@ -14,7 +14,7 @@ const Works = () => {
   return (
     <div
       name="Portfolio"
-      className="w-full pt-2 md:pt-20 text-gray-300 bg-primary-dark-blue"
+      className="w-full pt-20 text-gray-300 bg-primary-dark-blue  md:pr-12 lg:pr-[5%]"
       onMouseEnter={handleMouseEnter}>
       <div className="max-w-full mx-auto flex flex-col justify-center w-full text-left">
         <div className="pb-2">
