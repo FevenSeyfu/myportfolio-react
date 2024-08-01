@@ -83,7 +83,7 @@ const Hero = () => {
       <div className="flex flex-row gap-2 md:gap-4 lg:gap-12 items-center text-base lg:text-xl">
         <a
           href="https://drive.google.com/file/d/1RAFSlRP88BpNChu9Ns5iYck7wCgalOAu/view?usp=drive_link"
-          className="text-white border-2 px-3 md:px-6 py-3 my-2 flex items-center rounded-md hover:border-primary-dark-red hover:text-primary-dark-red"
+          className="font-bold text-lg md:text-xl text-white border-2 px-3 md:px-6 py-3 my-2 flex items-center rounded-md hover:border-primary-dark-red hover:text-primary-dark-red"
           aria-label="Get Resume"
         >
           Get Resume
@@ -91,7 +91,7 @@ const Hero = () => {
 
         <button
           onClick={scrollToSection}
-          className="bg-primary-dark-red border-primary-dark-red text-white hover:text-primary-dark-red hover:bg-primary-dark-blue border-2 hover:border-primary-dark-red group px-3 md:px-6 py-3 my-2 flex items-center rounded-md"
+          className="font-bold text-lg md:text-xl bg-primary-dark-red border-primary-dark-red text-primary-dark-blue hover:text-primary-dark-red hover:bg-primary-dark-blue border-2 hover:border-primary-dark-red group px-3 md:px-6 py-3 my-2 flex items-center rounded-md"
           aria-label="View Work"
         >
           View Work

@@ -70,7 +70,7 @@ const ProjectCarousel = ({ projects }) => {
                 <a
                   href={item.live}
                   onClick={() => handleButtonClick(item.name, "live")}
-                  className="flex flex-row items-center gap-2 text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-primary-dark-red bg-primary-dark-red hover:text-primary-dark-red hover:border-white hover:bg-white hover:cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  className="flex flex-row items-center gap-2  text-primary-dark-blue text-lg md:text-xl font-bold p-2 px-4 rounded-md border border-primary-dark-red bg-primary-dark-red hover:text-primary-dark-red hover:border-white hover:bg-white hover:cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                   aria-label={`View live demo of ${item.name}`}
                 >
                   <FaLink size={20} /> Live
@@ -78,7 +78,7 @@ const ProjectCarousel = ({ projects }) => {
                 <a
                   href={item.github}
                   onClick={() => handleButtonClick(item.name, "code")}
-                  className="flex flex-row items-center gap-2 text-md lg:text-xl font-bold p-2 px-4 rounded-md border border-white hover:text-primary-dark-red hover:cursor-pointer hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                  className="flex flex-row items-center gap-2 text-lg lg:text-xl font-bold p-2 px-4 rounded-md border border-white hover:text-primary-dark-red hover:cursor-pointer hover:bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                   aria-label={`View code of ${item.name}`}
                 >
                   <FaGithub size={20} /> Code
