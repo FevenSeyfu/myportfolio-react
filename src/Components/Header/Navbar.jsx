@@ -20,7 +20,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   isDynamic={true}
-                  className="text-lg font-bold hover:text-lighter-red hover:border-b-4 border-lighter-red pb-7 hover:cursor-pointer"
+                  className="text-lg font-bold hover:text-lighter-red hover:border-b-4 hover:border-lighter-red pb-7 hover:cursor-pointer"
                   href={`#${section}`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
