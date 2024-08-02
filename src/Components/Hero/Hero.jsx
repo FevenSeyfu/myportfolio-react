@@ -33,7 +33,7 @@ const Hero = () => {
       className="relative h-screen pt-24 md:pr-[160px] flex flex-col md:gap-4 justify-center overflow-x-hidden"
       onMouseEnter={handleMouseEnter}
     >
-      <p className="text-[#ccd6f6] text-md md:text-lg lg:text-xl">
+      <p className="text-[#ccd6f6] text-base md:text-lg lg:text-xl">
         Hey There, I'm
       </p>
       <div>
@@ -44,7 +44,7 @@ const Hero = () => {
           I'm a Full Stack Developer.
         </h1>
       </div>
-      <p className="text-gray-300 text-md md:text-xl lg:text-2xl py-4 lg:max-w-[900px]">
+      <p className="text-gray-300 text-base md:text-xl lg:text-2xl py-4 lg:max-w-[900px]">
         With hands-on experience in remote software development. I've built
         scalable{" "}
         <a
