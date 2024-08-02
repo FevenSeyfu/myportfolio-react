@@ -40,6 +40,7 @@ const ProjectCarousel = ({ projects }) => {
               width={item.width}
               height={item.height}
               style={{ aspectRatio: `${item.width} / ${item.height}` }}
+              loading="lazy" 
             />
             <div className="flex flex-col w-full  md:w-1/2 justify-center md:items-start gap-4 md:gap-6">
               <h2 className="text-xl md:text-4xl text-primary-dark-red font-bold">
