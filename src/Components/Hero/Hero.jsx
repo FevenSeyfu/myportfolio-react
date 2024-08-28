@@ -12,7 +12,8 @@ const Hero = () => {
       smooth: "easeInOutQuart",
     });
   };
-  // google analytics
+
+  // Google Analytics
   const handleMouseEnter = () => {
     ReactGA.event({
       category: "Section View",
@@ -40,28 +41,26 @@ const Hero = () => {
         <h2 className="text-light-red text-xl md:text-2xl lg:text-4xl font-bold">
           Feven Seyfu
         </h2>
-        <h1 className="text-primary-dark-red text-4xl md:4xl lg:text-5xl font-bold">
+        <h1 className="text-primary-dark-red text-4xl md:text-4xl lg:text-5xl font-bold">
           I'm a Full Stack Developer.
         </h1>
       </div>
       <p className="text-gray-300 text-base md:text-xl lg:text-2xl py-4 lg:max-w-[900px]">
-        With hands-on experience in remote software development. I've built
+        With hands-on experience in remote software development, I've built
         scalable{" "}
         <a
           href="https://drive.google.com/file/d/1UNninKfbEY3o9QiSTstYagHJwaL7ITzo/view?usp=drive_link"
-          className="text-primary-dark-red hover:text-light-red font-semibold underline underline-offset-4 "
+          className="text-primary-dark-red hover:text-light-red font-semibold underline underline-offset-4"
           aria-label="View Web Application"
         >
-          Web Application
+          Web Applications
         </a>{" "}
         for a governmental organization, excelled in my{" "}
-        <a
-          href="https://drive.google.com/file/d/1YnPsy89JXayNF4c7nuTMg1fywsmzFMqW/view?usp=drive_link"
+        <span
           className="text-primary-dark-red hover:text-light-red font-semibold underline underline-offset-4"
-          aria-label="View Computer Engineering Degree"
         >
           Computer Engineering Degree
-        </a>
+        </span>
         , and polished my skills at{" "}
         <a
           href="https://drive.google.com/file/d/13vZ9FqHuxbYWAjOH1ddba4agLXrrve-K/view?usp=drive_link"
@@ -69,8 +68,8 @@ const Hero = () => {
           aria-label="View Microverse"
         >
           Microverse
-        </a>
-        . I'd love to discuss how I can bring my expertise to your team.{" "}
+        </a>, where I worked in remote scrum teams and mentored students. I'd
+        love to discuss how I can bring my expertise to your team.{" "}
         <a
           href="mailto:fevenseyfu00@gmail.com"
           className="text-primary-dark-red hover:text-light-red font-semibold underline underline-offset-4"
