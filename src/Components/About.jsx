@@ -24,13 +24,12 @@ const About = () => {
           <div className="sm:text-right text-left  text-2xl md:text-4xl font-bold">
             <p>
               Hi! <br />
-              I'm Feven, Nice to meet you.Please Take a look around.
+              I'm Feven. Nice to meet you. Please take a look around.
             </p>
           </div>
           <div>
             <p>
-              I'm a Computer Engineering graduate with 2+ years in the tech
-              industry. Passionate about creating practical solutions and
+              A Software developer with a background in Computer Engineering with over 2 years of experience in the tech industry. Passionate about creating practical solutions and
               enhancing user experiences, I specialize in building
               pixel-perfect, accessible, and responsive full-stack applications.
               Explore my previous works to see the skills I bring to the table.
